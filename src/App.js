@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand
+} from 'mdb-react-ui-kit';
+import alert from './images/alert.png';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MDBNavbar light bgColor='light'>
+        <MDBContainer fluid>
+          <MDBNavbarBrand href='#'>
+
+            <img src={alert} alt="AlertMe" width="40" loading='lazy' />
+            AlertMe
+
+          </MDBNavbarBrand>
+          <MDBNavbarBrand href='#'>
+
+
+            AlertMe
+
+          </MDBNavbarBrand>
+        </MDBContainer>
+      </MDBNavbar>
+    </>
   );
 }
-
-export default App;
